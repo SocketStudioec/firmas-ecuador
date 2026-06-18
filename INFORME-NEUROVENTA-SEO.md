@@ -7,7 +7,9 @@
 
 ---
 
-## NEUROSCORE GLOBAL: **63 / 100** — BUENO (mejoras de conversión posibles)
+## NEUROSCORE GLOBAL: **71 / 100** — BUENO (subió desde 63 tras aplicar mejoras)
+
+> **Mejoras aplicadas (2026-06-18):** precios reales transparentes con anclaje de valor (precio por firma + % de ahorro por bloc); enfoque distribuidor (compra blocs → revende); pilares de marca (Seguridad / Cumplimiento legal / Eficiencia); CTAs con urgencia y microcopy ("demo gratis · 2 min · sin compromiso · activación 24 h"); casos reales (finiquitos, contratos, actas, contadores, abogados). Brechas restantes: lead magnet de reciprocidad y testimonios verificables con foto/cifra.
 
 | # | Pilar | Score | Estado |
 |---|-------|-------|--------|

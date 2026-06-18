@@ -1,12 +1,14 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
 import TrustBar from './components/TrustBar'
+import Pilares from './components/Pilares'
 import ComoFunciona from './components/ComoFunciona'
 import Diferencia from './components/Diferencia'
 import Funciones from './components/Funciones'
 import Seguridad from './components/Seguridad'
 import Casos from './components/Casos'
-import Planes from './components/Planes'
+import Precios from './components/Precios'
+import Distribuidores from './components/Distribuidores'
 import Testimonios from './components/Testimonios'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
@@ -22,12 +24,14 @@ export default function App() {
       <main>
         <Hero />
         <TrustBar />
+        <Pilares />
         <ComoFunciona />
         <Diferencia />
         <Funciones />
         <Seguridad />
         <Casos />
-        <Planes />
+        <Precios />
+        <Distribuidores />
         <Testimonios />
         <FAQ />
         <CTA />

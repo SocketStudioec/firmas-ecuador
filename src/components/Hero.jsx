@@ -56,13 +56,17 @@ export default function Hero() {
 
           <motion.div variants={fade} initial="hidden" animate="show" custom={3} className="mt-9 flex flex-wrap items-center gap-3">
             <button onClick={() => go('contacto')} className="btn-primary">
-              Solicitar demo
+              Solicitar demo gratis
               <Icon name="ArrowRight" className="h-4 w-4" />
             </button>
-            <button onClick={() => go('como-funciona')} className="btn-ghost">
-              Ver cómo funciona
+            <button onClick={() => go('precios')} className="btn-ghost">
+              Ver precios
             </button>
           </motion.div>
+          <motion.p variants={fade} initial="hidden" animate="show" custom={3.5} className="mt-3 flex items-center gap-2 text-[0.82rem] text-ink-faint">
+            <Icon name="Clock" className="h-3.5 w-3.5 text-valid" />
+            Demo de 2 minutos · sin compromiso · blocs desde <span className="font-semibold text-ink-soft">$25</span>
+          </motion.p>
 
           <motion.ul
             variants={fade}

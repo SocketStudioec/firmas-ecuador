@@ -8,6 +8,8 @@ export const CONTACT = {
   whatsapp: '593990000000',
   whatsappMsg:
     'Hola, quiero información sobre la Firma Transaccional (firmar con biometría sin tener firma electrónica).',
+  whatsappDist:
+    'Hola, soy distribuidor (o quiero serlo) y me interesa comprar blocs de Firma Transaccional para revender.',
   city: 'Santo Domingo, Ecuador',
   parentUrl: 'https://begroupec.com',
   appUrl: 'https://begroupec.com/firmas_electronicas/#/login',
@@ -18,8 +20,16 @@ export const NAV = [
   { id: 'diferencia', label: 'Sin firma .p12' },
   { id: 'funciones', label: 'Funciones' },
   { id: 'casos', label: 'Casos de uso' },
-  { id: 'planes', label: 'Planes' },
+  { id: 'precios', label: 'Precios' },
+  { id: 'distribuidores', label: 'Distribuidores' },
   { id: 'faq', label: 'Preguntas' },
+]
+
+// --- Pilares de marca (be Grupo Empresarial / Begroup) ---
+export const PILLARS = [
+  { icon: 'ShieldCheck', title: 'Seguridad y confianza', text: 'Identidad verificada con biometría y prueba de vida en cada firma.' },
+  { icon: 'FileSignature', title: 'Cumplimiento legal', text: 'Respaldo en la Ley de Comercio Electrónico, Firmas y Mensajes de Datos.' },
+  { icon: 'Clock', title: 'Eficiencia en cada transacción', text: 'Del documento a varias firmas en minutos, sin filas ni trámites previos.' },
 ]
 
 // --- Barra de confianza ---
@@ -125,31 +135,31 @@ export const FEATURES = [
   },
 ]
 
-// --- Casos de uso ---
+// --- Casos de uso (reales: contadores, abogados, finiquitos, contratos, actas) ---
 export const CASOS = [
   {
+    title: 'Finiquitos laborales',
+    text: 'El trabajador firma su finiquito o acta de salida con identidad verificada, desde su celular, sin necesidad de tener firma electrónica.',
+  },
+  {
     title: 'Contratos con varias partes',
-    text: 'Arrendamientos, prestación de servicios o acuerdos comerciales donde firman cliente, proveedor y testigos sin que todos tengan firma electrónica.',
+    text: 'Arrendamientos, prestación de servicios o acuerdos comerciales donde firman cliente, proveedor y testigos —aunque ninguno tenga certificado .p12.',
   },
   {
-    title: 'Actas y consentimientos',
-    text: 'Actas de reunión, consentimientos informados o autorizaciones que necesitan la firma verificada de varias personas en poco tiempo.',
+    title: 'Actas y autorizaciones',
+    text: 'Actas de reunión, autorizaciones y consentimientos que necesitan la firma verificada de varias personas en poco tiempo.',
   },
   {
-    title: 'Clientes sin firma electrónica',
-    text: 'Tu empresa firma documentos con clientes que nunca han comprado un certificado .p12, sin pedirles trámites previos.',
+    title: 'Estudios contables',
+    text: 'Contadores que hacen firmar a sus clientes documentos, declaraciones y autorizaciones sin pedirles trámites previos de firma.',
+  },
+  {
+    title: 'Estudios jurídicos',
+    text: 'Abogados que tramitan firmas de varios representantes y dejan trazabilidad legal completa de cada acto de firma.',
   },
   {
     title: 'Recursos humanos',
     text: 'Cartas de oferta, anexos de contrato y documentos internos firmados por el colaborador con su identidad verificada.',
-  },
-  {
-    title: 'Estudios jurídicos y contables',
-    text: 'Despachos que tramitan firmas de varios representantes y dejan trazabilidad legal completa de cada acto.',
-  },
-  {
-    title: 'Distribuidores Begroup',
-    text: 'Ofrece la Firma Transaccional a tu cartera de clientes con tu propio paquete de firmas y panel de seguimiento.',
   },
 ]
 
@@ -161,48 +171,32 @@ export const SECURITY = [
   { label: 'Trazabilidad', value: 'Auditoría completa por trámite' },
 ]
 
-// --- Planes (modelo real: por cantidad de firmas) ---
-export const PLANES = [
-  {
-    name: 'Emprende',
-    desc: 'Para profesionales y pequeños equipos que firman ocasionalmente.',
-    highlight: 'Paquete inicial de firmas',
-    features: [
-      'Firmas transaccionales por paquete',
-      'Multifirmante por enlace',
-      'Biometría con prueba de vida',
-      'Seguimiento de trámites',
-    ],
-    cta: 'Cotizar paquete',
-    featured: false,
-  },
-  {
-    name: 'Empresa',
-    desc: 'Para organizaciones con volumen recurrente de documentos.',
-    highlight: 'El más solicitado',
-    features: [
-      'Mayor cantidad de firmas incluidas',
-      'Auditoría y reportes',
-      'Geolocalización y trazabilidad',
-      'Soporte prioritario',
-    ],
-    cta: 'Hablar con ventas',
-    featured: true,
-  },
-  {
-    name: 'Distribuidor',
-    desc: 'Revende la Firma Transaccional con tu propia marca y cartera.',
-    highlight: 'Programa de distribuidores',
-    features: [
-      'Paquetes de firmas al por mayor',
-      'Panel y precios preferenciales',
-      'Capacitación e incentivos',
-      'Acompañamiento comercial',
-    ],
-    cta: 'Ser distribuidor',
-    featured: false,
-  },
-]
+// --- Precios reales: blocs de firmas transaccionales (PVP incluido IVA) ---
+// El distribuidor compra el bloc y revende cada firma a su cartera.
+export const PRICING = {
+  note: 'PVP incluido IVA. Cada firma completada descuenta del bloc. Las firmas no caducan mientras tu cuenta esté activa.',
+  baseUnit: 2.5, // $/firma del Bloc 10, usado para calcular el ahorro
+  blocs: [
+    { firmas: 10, precio: 25, badge: null, featured: false },
+    { firmas: 20, precio: 48, badge: null, featured: false },
+    { firmas: 30, precio: 66, badge: null, featured: false },
+    { firmas: 50, precio: 100, badge: 'El más vendido', featured: true },
+    { firmas: 100, precio: 190, badge: 'Mejor precio por firma', featured: false },
+  ],
+}
+
+// --- Programa de distribuidores ---
+export const DISTRIBUTOR = {
+  title: 'Compra blocs, revende firmas.',
+  subtitle:
+    'La Firma Transaccional es un producto pensado para distribuidores. Compras un bloc al por mayor, defines tu precio de venta y lo ofreces a tu cartera de contadores, abogados y empresas.',
+  points: [
+    { icon: 'Users', title: 'Tu propia cartera', text: 'Vende a contadores, estudios jurídicos, RR.HH. y empresas que firman finiquitos, contratos y actas.' },
+    { icon: 'ListChecks', title: 'Panel de control', text: 'Gestiona tus blocs, trámites y firmas restantes desde un solo lugar, con seguimiento en tiempo real.' },
+    { icon: 'ShieldCheck', title: 'Margen sin inventario', text: 'No manejas certificados ni stock físico: compras firmas, las revendes y solo se descuentan al usarse.' },
+  ],
+  cta: 'Quiero ser distribuidor',
+}
 
 // --- FAQ ---
 export const FAQ = [
@@ -228,7 +222,11 @@ export const FAQ = [
   },
   {
     q: '¿Cómo se cobra el servicio?',
-    a: 'Se trabaja con paquetes por cantidad de firmas. Cada firmante que completa su firma descuenta del paquete contratado. Escríbenos para cotizar el volumen que necesitas.',
+    a: 'Por blocs de firmas. Compras un bloc (10, 20, 30, 50 o 100 firmas) y cada firma completada lo descuenta. Los precios incluyen IVA y van desde $25 el Bloc 10. A mayor bloc, menor precio por firma.',
+  },
+  {
+    q: '¿Puedo revender la Firma Transaccional?',
+    a: 'Sí. Es un producto pensado para distribuidores: compras blocs al por mayor, defines tu precio de venta y lo ofreces a tu cartera (contadores, abogados, empresas). Escríbenos para unirte al programa de distribuidores.',
   },
 ]
 

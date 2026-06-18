@@ -24,10 +24,13 @@ export default function CTA() {
             </p>
             <div className="relative mt-9 flex flex-wrap items-center justify-center gap-3">
               <button onClick={go} className="btn bg-white px-7 py-3.5 text-royal-700 hover:bg-paper-warm hover:-translate-y-0.5">
-                Solicitar demo
+                Solicitar demo gratis
                 <Icon name="ArrowRight" className="h-4 w-4" />
               </button>
             </div>
+            <p className="relative mt-4 text-[0.85rem] text-white/70">
+              Respuesta en horario laboral · sin compromiso · activación en 24 h
+            </p>
           </div>
         </Reveal>
       </div>
